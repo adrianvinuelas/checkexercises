@@ -5,6 +5,7 @@
 profesor = ""
 repostudent = ""
 function reconfigurar(accion){
+	console.log("accion = " + accion);
 	if(accion == 0){
 		$("button").prop('disabled', false);
 		$("button.prohib").css("cursor","pointer")
@@ -111,8 +112,8 @@ function reconfigurar(accion){
 				$("#infoerrorGlobalname").hide()
 				$("#hayteacher").hide()
 			}
-			$("#hayglobal").hide()
 		}
+		$("#hayglobal").hide()
 		$("#isautenticado").hide()
 		$("#legend").hide()
 		$(function() {
@@ -216,13 +217,13 @@ function analizarepo(repeatrepo, repeatrama,numorden){
 				}else{
 					console.log("mostrar errorurl")
 					$("#errorurl").show()
-					$("#errorurl").html("<div class='alert alert-danger alert-dismissible' role='alert' style='width: 300px; margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
+					$("#errorurl").html("<div id='errorurl1' class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
 				}
 			});
 		}else{
 			console.log("mostrar errorurl")
 			$("#errorurl").show()
-			$("#errorurl").html("<div class='alert alert-danger alert-dismissible' role='alert' style='width: 300px; margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
+			$("#errorurl").html("<div id='errorurl1' class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
 		}			
 	}else{
 		console.log("hay repeatrepo")
@@ -297,7 +298,7 @@ function deluser(){
 			})
 		}else{
 			$("#errordel").show()                              
-			$("#errordel").html("<div class='alert alert-warning alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> CHECK YOUR DATA</div><br>")
+			$("#errordel").html("<div id='errordel2' class='alert alert-warning alert-dismissible text1 mes1' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> CHECK YOUR DATA</div><br>")
 		}
 	})	
 }
@@ -331,7 +332,7 @@ function login(){
 		})
 	}else{
 			$("#errorlog").show()                              
-			$("#errorlog").html("<div class='alert alert-warning alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> CHECK YOUR DATA</div><br>")
+			$("#errorlog").html("<div id='errorlog1' class='alert alert-warning alert-dismissible text1 mes1' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> CHECK YOUR DATA</div><br>")
 	}
 }
 
@@ -368,12 +369,12 @@ function newUser(){
 				})
 			}else{
 				$("#errorcreate").show()                              
-				$("#errorcreate").html("<div class='alert alert-warning alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> PASSWORD MUST CONTAIN 6 CHARACTERS MIN</div><br>")
+				$("#errorcreate").html("<div id='errorcreate1' class='alert alert-warning alert-dismissible text1 mes1' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> PASSWORD MUST CONTAIN 6 CHARACTERS MIN</div><br>")
 			}
 			
 		}else{
 			$("#errorcreate").show()                              
-			$("#errorcreate").html("<div class='alert alert-warning alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> CHECK YOUR DATA</div><br>")
+			$("#errorcreate").html("<div id='errorcreate1' class='alert alert-warning alert-dismissible text1 mes1' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Warning!</strong> CHECK YOUR DATA</div><br>")
 		}		
 	})
 }
@@ -790,13 +791,13 @@ function obtenerforks(repeatrepo, repeatrama, numorden){
 				}else{
 					console.log("mostrar errorurl")
 					$("#errorurl").show()
-					$("#errorurl").html("<div class='alert alert-danger alert-dismissible' role='alert' style='width: 300px; margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
+					$("#errorurl").html("<div id='errorurl1' class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
 				}
 			});
 		}else{
 			console.log("mostrar errorurl")
 			$("#errorurl").show()
-			$("#errorurl").html("<div class='alert alert-danger alert-dismissible' role='alert' style='width: 300px; margin: 10px 0 0 410px'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
+			$("#errorurl").html("<div id='errorurl1' class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>Error!</strong> Repository's name is wrong</div><br>")
 		}			
 	}else{
 		console.log("hay repeatrepo")

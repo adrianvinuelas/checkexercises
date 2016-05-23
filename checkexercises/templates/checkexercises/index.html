@@ -49,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Check Github Repositories
+                <a class="navbar-brand page-scroll text5" href="#page-top">Check Github Repositories
                     {% if autenticado %}
                     ({{userlogin}})
                     {% endif %}
@@ -59,7 +59,7 @@
                                 {% if i.urlTeacherEx == urlteach %}
                                     {% if i.branch == rama %}
                                       {% if i.numorden == numord %}
-                                        <p style="font-size:small";>{{i.urlTeacherEx}} <b>({{i.branch}})</b> ({{i.numorden}})</p>
+                                       <p class ="text3">{{i.urlTeacherEx}} <b>({{i.branch}})</b> ({{i.numorden}})</p>
                                       {% endif %}
                                     {% endif %}
                                 {% endif %}
@@ -69,7 +69,7 @@
                                 {% if i.urlStudentEx == urlstudent %}
                                     {% if i.branch == rama %}
                                       {% if i.numorden == numord %}
-                                        <p style="font-size:small";>{{i.urlStudentEx}} <b>({{i.branch}})</b> ({{i.numorden}})</p>
+                                        <p class ="text3">{{i.urlStudentEx}} <b>({{i.branch}})</b> ({{i.numorden}})</p>
                                        {% endif %}
                                     {% endif %}
                                 {% endif %}
@@ -126,7 +126,7 @@
                           <br>
                           <div id="errorlog"></div>
                           {% if errorlogin %}
-                            <div class='alert alert-warning alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'>
+                            <div id="errorlog2" class='alert alert-warning alert-dismissible text1 mes1' role='alert'>
                                 <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                 <span aria-hidden='true'>&times;</span>
                             </button><strong>Warning!</strong> {{errorlogin}}
@@ -134,16 +134,18 @@
                             <br>
                           {% endif %} 
                           {% if errordel %}
-                            <div class='alert alert-success alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'>
+                            <div id="errordel1" class='alert alert-success alert-dismissible text1 mes1' role='alert'>
                                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                                   <span aria-hidden='true'>&times;</span>
                               </button><strong>Succes!</strong> {{errordel}}
                             </div>
                             <br>
-                          {% endif%}         
-                            <button type="button" id="botonlogin" class="page-scroll btn btn-xl prohib">Login</button>
-                            <button type="button" id="botonnewuser" class="page-scroll btn btn-xl prohib">New User</button>
-                            <div><button type="button" id="botondeluser" class="page-scroll btn btn-danger prohib">Delete User</button></div>
+                          {% endif%}   
+                            <div class="col-md-1"></div><div class="col-md-1"></div><div class="col-md-1"></div>     
+                            <button type="button" id="botonlogin" class="page-scroll btn btn-xl prohib col-md-2 col-xs-12">Login</button>
+                            <button type="button" id="botonnewuser" class="page-scroll btn btn-xl prohib col-md-2 col-xs-12">New User</button>
+                            <div class="col-md-5"></div>
+                            <div><button type="button" id="botondeluser" class="page-scroll btn btn-danger prohib col-md-2">Delete User</button></div>
                            
                         </div> 
                     </div>
@@ -164,9 +166,10 @@
                                 <input type="radio" name="optionsRol" id="optionsStudent" value="student"> student
                               </label>
                           </div> 
-                          <div id="errorcreate"></div>      
-                            <button type="button" id="botoncreate" class="page-scroll btn btn-xl prohib">Create User</button>
-                            <button type="button" id="botonreturn" class="page-scroll btn btn-xl prohib">Return</button>
+                          <div id="errorcreate"></div> 
+                            <div class="col-md-1"></div><div class="col-md-1"></div><div class="col-md-1"></div><div class="col-md-1"></div>
+                            <button type="button" id="botoncreate" class="page-scroll btn btn-xl prohib col-md-2 col-xs-12">Create User</button>
+                            <button type="button" id="botonreturn" class="page-scroll btn btn-xl prohib col-md-2 col-xs-12">Return</button>
                         </div> 
                     </div>
                     <div id="delusuario">
@@ -183,11 +186,11 @@
                         <input type="password" class="form-control form1" placeholder="Enter your password (6 characters min)" name="dirgithub" value="" id="password3" size="60"/>
                         <br>
                         <div id="errordel"></div>
-                        <div id="delask" class='alert alert-danger alert-dismissible text1 mes1' role='alert' style='margin: 10px 0 0 410px'>
+                        <div id="delask" class='alert alert-danger alert-dismissible text1 mes1' role='alert'>
                         </div>
-                        <br>    
-                          <button type="button" id="deluserdefinit" class="page-scroll btn btn-xl prohib">Delete</button>
-                          <button type="button" id="botonreturn1" class="page-scroll btn btn-xl prohib">Return</button>
+                        <div class="col-md-1"></div><div class="col-md-1"></div><div class="col-md-1"></div>
+                          <button type="button" id="deluserdefinit" class="page-scroll btn btn-xl prohib col-md-2 col-xs-12">Delete</button>
+                          <button type="button" id="botonreturn1" class="page-scroll btn btn-xl prohib col-md-2 col-xs-12">Return</button>
                       </div>
                     </div>
                 {% endif %}
@@ -341,7 +344,7 @@
                 </div>
             </div>
             <div id="rankingerrorglobal" class="text-left">
-                <pre style="background-color: white">{{rankerrorsglobal|safe}}</pre>
+                <pre class="text2" style="background-color: white">{{rankerrorsglobal|safe}}</pre>
             </div> 
 
             <div id="infoerrorGlobal">{{infoerroresGlobal}}</div>
@@ -408,7 +411,7 @@
                     <h4 class="service-heading">ERRORS' GRAPH</h4>        
                   </div>
               </div>
-              <div id="legend" class="text-center" style="position: absolute; z-index: 1000">
+              <div id="legend" class="text-center hidden-xs">
                   <ul>
                       <li style="color: blue">JSLint</li>
                       <li style="color: red">JSHint</li>
@@ -435,36 +438,36 @@
               <div class="row text-center">
                   
                   <div class="tab">
-                      <ul>
+                      <ul class="text2">
                           {% if is_teacher == True %}
                               <li><a href="#errorranking">Error Ranking</a></li>
                               <li><a href="#fichranking">Fich Ranking</a></li>
                               <li><a href="#rankingerror">Common Errors</a></li>
-                              <li><a href="#diferror">Errors Difference</a></li>   
+                              <li class="hidden-xs"><a href="#diferror">Errors Difference</a></li>   
                           {% else %}
                               <li><a href="#rankingerror">Common Errors</a></li>
-                              <li><a href="#diferror">Errors Difference</a></li>   
+                              <li class="hidden-xs"><a href="#diferror">Errors Difference</a></li>   
                           {% endif %}                       
                       </ul>
                       {% if is_teacher == True %}
                           <div id="errorranking" class="text-left">
-                              <pre style="background-color: white">{{ranktotal|safe}}</pre>
+                              <pre class="text2" style="background-color: white">{{ranktotal|safe}}</pre>
                           </div>
                           
                           <div id="fichranking" class="text-left">
-                              <pre style="background-color: white">{{rankfich|safe}}</pre>
+                              <pre class="text2" style="background-color: white">{{rankfich|safe}}</pre>
                           </div>
 
                           <div id="rankingerror" class="text-left">
-                              <pre style="background-color: white">{{rankerrors|safe}}</pre>
+                              <pre class="text2" style="background-color: white">{{rankerrors|safe}}</pre>
                           </div>
-                          <div id="diferror" class="text-left">{{errorescomparar}}</div>
+                          <div id="diferror" class="text-left hidden-xs">{{errorescomparar}}</div>
                           <div id="infoerrorGlobalname">{{userlogin}}</div>
                       {% else %}
                           <div id="rankingerror" class="text-left">
-                              <pre style="background-color: white">{{rankerrors|safe}}</pre>
+                              <pre class="text2" style="background-color: white">{{rankerrors|safe}}</pre>
                           </div>
-                          <div id="diferror" class="text-left">{{errorescomparar}}</div> 
+                          <div id="diferror" class="text-left hidden-xs">{{errorescomparar}}</div> 
                           <div id="infoerrorGlobalname">{{userlogin}}</div>
                       {% endif %}       
                   </div>
@@ -539,7 +542,7 @@
                                 <h4>{{repo.nameStudent}}</h4>
                                 <!--<p class="text-muted">{{repo.urlStudentEx}}</p> -->
                                 <br>
-                                <ul class="menu">
+                                <ul class="menu hidden-xs">
                                     <li style="z-index: 0; position: static; background-color: #FFD700">
                                         SUMMARY ->
                                         <ul style="position:absolute;z-index:1000;">
@@ -573,14 +576,14 @@
                                     <div id="graficfich1">{{graficfich1}}</div>
                                     <div id="graficfich1namediv">{{grafdiv}}</div>
                                     <div id="tabs{{repos.urlStudentEx}}" class="tab">
-                                        <ul>
+                                        <ul class="text2">
                                         {%for fich in fichs %}
                                             <li><a href="#{{fich.name}}" onclick='createGraphic("{{fich.data}}","{{fich.name}}graphic","false")'>{{fich.name}}</a></li>
                                         {% endfor %}
                                         </ul>
                                         {%for fich1 in fichs %}
                                             <div id="{{fich1.name}}" class="text-left">
-                                                <div id="legend{{fich1.name}}">
+                                                <div id="legend{{fich1.name}}" class="hidden-xs">
                                                     <ul>
                                                         <li style="color: blue">JSLint</li>
                                                         <li style="color: red">JSHint</li>
@@ -589,10 +592,10 @@
                                                 <div id="{{fich1.name}}graphic"></div>
                                                 <br>
                                                 <div id ="resumen">
-                                                    <pre style="height: 400px;">{{fich1.sumary|safe}}</pre>
+                                                    <pre class="text4">{{fich1.sumary|safe}}</pre>
                                                 </div>
-                                                <pre class="result" style="height: 400px;">{{fich1.analisisJSLint}}</pre>
-                                                <pre class="result" style="height: 400px;">{{fich1.analisisJSHint}}</pre>                         
+                                                <pre class="result text4">{{fich1.analisisJSLint}}</pre>
+                                                <pre class="result text4">{{fich1.analisisJSHint}}</pre>                         
                                             </div>
                                         {% endfor %}
                                     </div>
@@ -666,7 +669,7 @@
                             {% else %}
                                 {% if fichs %}
                                 <div id="tabs{{repo.urlStudentEx}}" class="tab">
-                                <ul>
+                                <ul class="text2">
                                 {%for fich in fichs %}
                                     {% if fich.urlstudent == repo.urlStudentEx %}
                                     <li><a href="#{{fich.name}}" onclick='createGraphic("{{fich.data}}","{{repo.nameStudent}}{{fich.name}}graphic","false")'>{{fich.name}}</a></li>
@@ -676,7 +679,7 @@
                                 {%for fich1 in fichs %}
                                     {% if fich1.urlstudent == repo.urlStudentEx %}
                                     <div id="{{fich1.name}}" class="text-left">
-                                        <div id="legend{{fich1.name}}">
+                                        <div id="legend{{fich1.name}}" class="hidden-xs">
                                             <ul>
                                                 <li style="color: blue">JSLint</li>
                                                 <li style="color: red">JSHint</li>
@@ -685,10 +688,10 @@
                                         <div id="{{repo.nameStudent}}{{fich1.name}}graphic"></div>
                                         <br>
                                         <div id ="resumen">
-                                            <pre style="height: 400px;">{{fich1.sumary|safe}}</pre>
+                                            <pre class="text4">{{fich1.sumary|safe}}</pre>
                                         </div>
-                                        <pre class="result" style="height: 400px;">{{fich1.analisisJSLint}}</pre>
-                                        <pre class="result" style="height: 400px;">{{fich1.analisisJSHint}}</pre>                         
+                                        <pre class="result text4">{{fich1.analisisJSLint}}</pre>
+                                        <pre class="result text4">{{fich1.analisisJSHint}}</pre>                         
                                     </div>
                                     {% endif %}
                                 {% endfor %}

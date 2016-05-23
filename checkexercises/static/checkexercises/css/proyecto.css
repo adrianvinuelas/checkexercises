@@ -18,7 +18,11 @@ body{
 }
 
 #botonlogin{
-	margin: 0 0 0 15px;
+	margin: 0 0 0 80px;
+}
+
+#deluserdefinit{
+	margin: 0px 0 0 80px;
 }
 
 #botonnewuser{
@@ -31,6 +35,47 @@ body{
 
 #botonreturn{
 	margin: 0 0 0 30px;
+}
+
+#botonreturn1{
+	margin: 0px 0px 0px 30px;
+}
+
+#loguearerror{
+	margin: 10px 0 0 410px;
+}
+
+#errorlog1{
+	margin: 10px 0 0 410px;
+}
+
+#errorlog2{
+	margin: 10px 0 0 410px;
+}
+
+#errordel1{
+	margin: 10px 0 0 410px;
+}
+
+#errorcreate1{
+	margin: 10px 0 0 410px;
+}
+
+#errordel2{
+	margin: 10px 0 0 410px;
+}
+
+#errorurl1{
+	width: 300px; 
+	margin: 10px 0 0 410px;
+}
+
+#delask{
+	margin: 10px 0 10px 410px;
+}
+
+#botoncreate{
+	margin: 0px 0 0 0px;
 }
 
 #form{
@@ -97,6 +142,11 @@ body{
 	margin: 30px 0 0 270px
 }
 
+#legend{
+	position: absolute; 
+	z-index: 1000;
+}
+
 .redir:hover{
 	cursor:help;
 	text-decoration: underline;
@@ -134,11 +184,71 @@ body{
 	margin: 0 0 0 120px;
 }
 
+.text3{
+	font-size:small;
+}
+
+.text4{
+		height: 400px;
+	}
+
 @media screen and (max-width: 768px){
 	.form1{
 		width: 200px;
 		margin: 0 0 0 45px;
 		height: 50px;
+	}
+
+	#botonlogin{
+		margin: 0 0 0 0px;
+	}
+
+	#deluserdefinit{
+		margin: 0px 0 0 0px;
+	}
+
+	#botonnewuser{
+		margin: 10px 0 0 0px;
+	}
+
+	#loguearerror{
+		margin: 0px 0 0 0px;
+	}
+
+	#errorlog1{
+		margin: 0px 0 0 65px;
+	}
+
+	#errorlog2{
+		margin: 0px 0 0 65px;
+	}
+
+	#errordel2{
+		margin: 0px 0 0 65px;
+	}
+
+	#errorcreate1{
+		margin: 0px 0 0 65px;
+	}
+
+	#delask{
+		margin: 0px 0 10px 65px;
+	}
+
+	#errordel1{
+		margin: 0px 0 0 65px;
+	}
+
+	#botoncreate{
+		margin: 0px 0 0 0px;
+	}
+
+	#botonreturn{
+		margin: 10px 0 10px 0px;
+	}
+
+	#botonreturn1{
+		margin: 10px 0px 10px 0px;
 	}
 
 	#panelLibrary{
@@ -168,8 +278,35 @@ body{
 		margin: 30px 0 0 45px
 	}
 
+	#errorurl1{
+		width: 200px; 
+		margin: 0px 0 0 45px;
+	}
+
+	.progress{
+		width: 40%;
+		margin: 0 0 0 90px;
+	}
+
 	.text1{
 		font-size: x-small;
+	}
+
+	.text2{
+		font-size: 50%;
+	}
+
+	.text3{
+		font-size: 50%;
+	}
+
+	.text4{
+		height: 200px;
+		font-size:50%;
+	}
+	
+	.text5{
+		font-size: 80%;
 	}
 
 	.mes1{
